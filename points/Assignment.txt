@@ -1,0 +1,61 @@
+You will find points.txt in your project folder.
+
+This text file represents a list of points in the format (x,y)
+    One point on each line
+
+x I need to be able to read these points into my program and write new points to the file.
+
+x Modify the WritePointToFile function to take a Point[] 
+
+x I want to know the largest x value and the largest y value present in the points list
+
+x I want to know the smallest x value and the smallest y value present in the points list
+
+x Modify WritePointToFile(Point[]) to make it more efficient
+    - Currently is opening and closing the file on every loop!
+    - Should only write to the file one time, all points at once
+
+x In Geographical Information Systems (GIS), a rectangle is usually known as an extent or envelope. Sometimes, we like to know the smallest rectangle (extent) needed to box in a set of points
+    x Make an Envelope class, and add a function to your PointCalculator that gives me the Envelope (minimum bounding rectangle) for an array of Point. Refer to the drawing I made you.
+
+x Your FindEnvelope function is a bit inefficient. It uses 4 other functions, each one looping through the input array once, for a total of 4 redundant loops. You can find the envelope using a single for loop (and not using your other functions)
+
+x Envelope needs a function called ContainsPoint that tests whether or not a given Point is contained within the Envelope
+
+x Make your Point class read-only with a constructor
+
+x I need another function in PointCalculator that takes in an array of Points and a query Point, and returns the Point closest in distance to my query Point
+
+x Write unit tests for existing functionality
+
+x Given an array of Points, tell me the two Points which are closest to each other
+    - This function should return an array of size 2 containing the found Points
+    - This will require a for loop inside of a for loop
+
+x Tell me the two points that are farthest from each other
+
+x Given an array of Points, find the center
+
+
+I need to be able to buffer an Envelope by a certain percentage (represented by a decimal value between 0..1)
+    Function takes in an Envelope and a percentage (0...1), returns a buffered Envelope
+
+
+The Envelope class should have a function called GetArea()
+
+
+I should be able to subdivide an Envelope into n number of parts
+    - n should be even for now
+    - Give me back an array of Envelopes representing each part
+
+*****************
+
+Make a Segment (as in line segment) class
+    Tell me how long a segment is
+    Tell me the slope/angle of a segment
+    Tell me if a point lies on the segment
+    tell me if two segments intersect each other
+
+*******************
+    
+Your PointProcessor class needs to use Streams instead of File.blabla in order to be more efficient when reading and writing (importing and exporting) potentially millions of Points
